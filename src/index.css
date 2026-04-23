@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+/* ✅ DO NOT kill background — let App.jsx handle it */
+html, body, #root {
+  height: 100%;
+}
+
+/* 🔥 Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 🔤 Font (Japan tech style) */
+body {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  color: white;
+  background: transparent;
+}
+
+/* 🔲 SUBTLE GRID (tech feel) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index: -30;
+  pointer-events: none;
+}
+
+/* 🌫️ NOISE TEXTURE (removes flat look) */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.03;
+  z-index: -20;
+  pointer-events: none;
+}
