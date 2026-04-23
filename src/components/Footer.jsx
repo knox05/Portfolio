@@ -9,7 +9,7 @@ const Footer = () => {
         
         {/* LEFT */}
         <p>
-          © {new Date().getFullYear()} Varun. All rights reserved.
+          © {new Date().getFullYear()} Vyankatesh. All rights reserved.
         </p>
 
         {/* CENTER - SOCIALS */}
