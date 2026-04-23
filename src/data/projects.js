@@ -81,7 +81,7 @@ const projects = [
 
     screenshots: [
       "/forgetting-risk1.png",
-      "/projects/forgetting-risk2.png",
+      "forgetting-risk2.png",
     ],
   },
 ];
