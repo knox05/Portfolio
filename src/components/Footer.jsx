@@ -15,7 +15,7 @@ const Footer = () => {
         {/* CENTER - SOCIALS */}
         <div className="flex gap-6">
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/knox05"
             target="_blank"
             className="hover:text-white transition"
           >
@@ -23,7 +23,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="https://linkedin.com/in/yourusername"
+            href="https://www.linkedin.com/in/vyankatesh-punnal-652007346/"
             target="_blank"
             className="hover:text-white transition"
           >
@@ -31,7 +31,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="mailto:yourmail@gmail.com"
+            href="mailto:varunpunnal59@gmail.com"
             className="hover:text-white transition"
           >
             Email

@@ -107,7 +107,7 @@ const Hero = () => {
             <div className="absolute inset-0 rounded-2xl border border-white/10"></div>
 
             <img
-              src="/profile.jpg"
+              src="/profile.png"
               alt="Varun"
               className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl"
             />
