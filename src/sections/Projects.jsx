@@ -11,6 +11,7 @@ const Projects = () => {
 
   useEffect(() => {
     const el = sectionRef.current;
+    
 
     // Header animation
     gsap.fromTo(
@@ -32,23 +33,26 @@ const Projects = () => {
 
     cards.forEach((card, i) => {
       gsap.fromTo(
-        card,
-        {
-          x: i % 2 === 0 ? -100 : 100,
-          opacity: 0,
+      card,
+      {
+        x: i % 2 === 0 ? -100 : 100,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: card,
+          start: "top 85%",
+          end: "top 30%",
+          scrub: 1,
         },
-        {
-          x: 0,
-          opacity: 1,
-          duration: 0.8,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: card,
-            start: "top 85%",
-          },
-        }
-      );
+      }
+    );
     });
+    ScrollTrigger.refresh();
   }, []);
 
   return (
