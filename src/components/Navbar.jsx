@@ -1,26 +1,45 @@
 import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
-const sections = ["home", "about", "projects", "contact"];
+const sections = ["home", "about", "projects", "certifications", "contact"];
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [active, setActive] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
-  // 🔥 Scroll to section with offset fix
-  const scrollToSection = (id) => {
-    const el = document.getElementById(id);
-    if (el) {
-      const yOffset = -80; // navbar height offset
-      const y =
-        el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+  const navigate = useNavigate();
+  const location = useLocation();
 
-      window.scrollTo({ top: y, behavior: "smooth" });
-      setMenuOpen(false);
+  // 🔥 Smart scroll (works from ANY page)
+  const scrollToSection = (id) => {
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          const yOffset = -80;
+          const y =
+            el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      const el = document.getElementById(id);
+      if (el) {
+        const yOffset = -80;
+        const y =
+          el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
     }
+
+    setMenuOpen(false);
   };
 
-  // 🔥 Detect active section
+  // 🔥 Active section detection
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -45,16 +64,15 @@ const Navbar = () => {
   return (
     <nav className="fixed top-4 left-1/2 -translate-x-1/2 w-[92%] max-w-5xl z-50">
       
-      {/* 🔹 Main Navbar */}
+      {/* 🔹 Navbar */}
       <div
         className={`backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl px-5 py-3 flex justify-between items-center shadow-lg transition-all duration-300 ${
           scrolled ? "scale-[0.98] bg-white/10" : ""
         }`}
       >
-        
         {/* Logo */}
         <h1
-          className="text-lg md:text-xl font-semibold cursor-pointer"
+          className="text-lg md:text-xl font-semibold cursor-pointer tracking-wide"
           onClick={() => scrollToSection("home")}
         >
           Vyankatesh.dev
@@ -86,7 +104,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* 🔹 Mobile Menu */}
+      {/* Mobile Menu */}
       {menuOpen && (
         <div className="mt-2 backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-4 md:hidden shadow-lg">
           <ul className="flex flex-col gap-4 text-sm text-center">
