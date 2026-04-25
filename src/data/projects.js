@@ -7,7 +7,7 @@ const projects = [
     longDescription:
       "A full-featured anime streaming platform with responsive UI, smooth animations, episode navigation, and modern design inspired by real streaming platforms like Netflix and Aniwatch.",
 
-    image: "/aniwatch.png",
+    image: "/projects/aniwatch.png",
 
     tech: ["React", "Tailwind", "GSAP"],
 
@@ -22,8 +22,8 @@ const projects = [
     ],
 
     screenshots: [
-      "/aniwatch1.png",
-      "/aniwatch2.png",
+      "/projects/aniwatch1.png",
+      "/projects/aniwatch2.png",
     ],
   },
 
@@ -35,7 +35,7 @@ const projects = [
     longDescription:
       "A comprehensive Learning Management System (LMS) designed to manage courses, assignments, students, and instructors with an intuitive and modern UI. It supports role-based access, progress tracking, and interactive learning features.",
 
-    image: "/lms.png",
+    image: "/projects/lms.png",
 
     tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind"],
 
@@ -51,8 +51,8 @@ const projects = [
     ],
 
     screenshots: [
-      "/lms1.png",
-      "/lms2.png",
+      "/projects/lms1.png",
+      "/projects/lms2.png",
     ],
   },
 
@@ -64,7 +64,7 @@ const projects = [
     longDescription:
       "A predictive machine learning system designed to estimate the probability of a user forgetting learned material over time. The model uses behavioral patterns, revision history, and time gaps to identify high-risk forgetting intervals and improve personalized learning retention strategies.",
 
-    image: "/forgetting-risk.png",
+    image: "/projects/forgetting-risk.png",
 
     tech: ["Python", "Scikit-learn", "Pandas", "NumPy", "Flask"],
 
@@ -80,8 +80,8 @@ const projects = [
     ],
 
     screenshots: [
-      "/forgetting-risk1.png",
-      "/forgetting-risk2.png",
+      "/projects/forgetting-risk1.png",
+      "/projects/forgetting-risk2.png",
     ],
   },
 ];
