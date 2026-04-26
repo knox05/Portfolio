@@ -7,14 +7,18 @@ const certifications = [
     location: "India",
 
     description:
-      "National level hackathon participation showcasing innovation.",
+      "Participated in a national-level hackathon focused on innovation and rapid prototyping.",
 
     longDescription:
-      "Participated in HackWhack 3.0, a national-level hackathon focused on solving real-world problems.",
+      "HackWhack 3.0 is a national-level hackathon where participants develop innovative solutions under strict time constraints.",
+
+    detailedDescription:
+      "Worked in a team to design and build a real-world solution within limited time.",
 
     image: "Hackwhack.jpeg",
 
     skills: ["Problem Solving", "Teamwork", "Innovation", "Rapid Development"],
+    toolsUsed: ["React", "Node.js", "Figma"],
 
     features: [
       "National-level competition",
@@ -23,14 +27,11 @@ const certifications = [
     ],
 
     achievements: [
-      "Delivered solution under time pressure",
-      "Demonstrated innovation",
+      "Built working prototype within deadline",
     ],
 
-    screenshots: [
-      "Hackwhack.jpeg",
-      "GSA_Vyankatesh-Punnal.jpeg", // ⚠️ rename in ImageKit (no spaces)
-    ],
+    learningOutcome:
+      "Improved teamwork and problem-solving ability.",
   },
 
   {
@@ -41,26 +42,53 @@ const certifications = [
     location: "India",
 
     description:
-      "Worked as an SDE intern in a fintech company environment.",
+      "Worked as an SDE intern on real-world fintech systems.",
 
     longDescription:
-      "Completed a Software Development Engineer internship at Bluestock Fintech.",
+      "Gained hands-on experience building backend systems.",
+
+    detailedDescription:
+      "Worked on APIs and backend modules.",
 
     image: "BlueStock.jpg",
 
     skills: ["Software Engineering", "Fintech", "System Design"],
+    toolsUsed: ["Node.js", "MongoDB"],
 
-    features: [
-      "Real fintech project exposure",
-      "Understanding scalable systems",
-    ],
+    features: ["Real fintech exposure"],
 
-    achievements: [
-      "Worked on fintech modules",
-      "Improved system design",
-    ],
+    achievements: ["Worked on production-level code"],
 
-    screenshots: ["BlueStock.jpg"],
+    learningOutcome:
+      "Gained industry backend experience.",
+  },
+
+  {
+    id: "gsa-certification",
+    title: "GSA Certification",
+    issuer: "GSA Organization",
+    duration: "2025",
+
+    description:
+      "Certification recognizing technical skills.",
+
+    longDescription:
+      "Awarded for strong analytical abilities.",
+
+    detailedDescription:
+      "Validated structured problem-solving approach.",
+
+    image: "GSA_Vyankatesh Punnal.jpeg", // ⚠️ space handled in component
+
+    skills: ["Problem Solving", "Analytical Thinking"],
+    toolsUsed: ["Python"],
+
+    features: ["Technical evaluation"],
+
+    achievements: ["Recognized for skills"],
+
+    learningOutcome:
+      "Improved analytical thinking.",
   },
 
   {
@@ -69,26 +97,25 @@ const certifications = [
     issuer: "YCCE Nagpur",
     duration: "Aug 2025",
 
-    description:
-      "National-level hackathon focused on AI, DS, and IoT.",
+    description: "AI & IoT hackathon.",
 
     longDescription:
-      "Participated in CodeRush 1.0 solving AI and IoT problems.",
+      "Worked on interdisciplinary problems.",
+
+    detailedDescription:
+      "Developed AI-based solutions.",
 
     image: "CodeRush.jpg",
 
-    skills: ["AI", "Data Science", "IoT"],
+    skills: ["AI", "Data Science"],
+    toolsUsed: ["Python"],
 
-    features: [
-      "AI & DS problem solving",
-      "Team collaboration",
-    ],
+    features: ["AI problem solving"],
 
-    achievements: [
-      "Solved interdisciplinary problems",
-    ],
+    achievements: ["Built AI solution"],
 
-    screenshots: ["CodeRush.jpg"],
+    learningOutcome:
+      "Improved AI understanding.",
   },
 
   {
@@ -97,83 +124,79 @@ const certifications = [
     issuer: "InternPe",
     duration: "Jun 2025 – Jul 2025",
 
-    description:
-      "Internship focused on modern web technologies.",
+    description: "Full-stack internship.",
 
     longDescription:
-      "Completed a 4-week internship on full-stack development.",
+      "Worked on modern web apps.",
+
+    detailedDescription:
+      "Built responsive applications.",
 
     image: "InternPE_page-0001.jpg",
 
-    skills: ["Web Development", "Frontend", "Backend"],
+    skills: ["Web Development"],
+    toolsUsed: ["React", "Express"],
 
-    features: [
-      "Hands-on development",
-      "Real-world projects",
-    ],
+    features: ["Hands-on projects"],
 
-    achievements: [
-      "Built web applications",
-    ],
+    achievements: ["Built web apps"],
 
-    screenshots: ["InternPE_page-0001.jpg"],
+    learningOutcome:
+      "Improved full-stack skills.",
   },
 
   {
     id: "oracle-gen-ai-professional",
-    title: "OCI 2025 Certified Generative AI Professional",
-    issuer: "Oracle University",
+    title: "OCI Generative AI Professional",
+    issuer: "Oracle",
     duration: "2025",
-    location: "Global Certification",
 
-    description:
-      "Advanced certification for Generative AI solutions.",
+    description: "AI certification.",
 
     longDescription:
-      "Achieved Oracle Certified Professional status in Generative AI.",
+      "Covers LLMs and deployment.",
+
+    detailedDescription:
+      "Learned enterprise AI.",
 
     image: "Oracle.jpg",
 
-    skills: ["Generative AI", "OCI", "LLMs"],
+    skills: ["Generative AI"],
+    toolsUsed: ["Oracle Cloud"],
 
-    features: [
-      "Oracle certification",
-      "Enterprise AI knowledge",
-    ],
+    features: ["AI deployment"],
 
-    achievements: [
-      "Recognized as AI Professional",
-    ],
+    achievements: ["Certified AI professional"],
 
-    screenshots: ["Oracle.jpg"],
+    learningOutcome:
+      "Strong AI knowledge.",
   },
 
   {
     id: "nextwave-gen-ai-workshop",
-    title: "Build Your Own Generative AI Model",
+    title: "Build Your Own AI Model",
     issuer: "NxtWave",
     duration: "2025",
 
-    description:
-      "Hands-on workshop for AI model building.",
+    description: "AI workshop.",
 
     longDescription:
-      "Built a generative AI model in a guided workshop.",
+      "Built AI models.",
+
+    detailedDescription:
+      "Hands-on AI learning.",
 
     image: "NextWave2_page-0001.jpg",
 
-    skills: ["Generative AI", "Model Building"],
+    skills: ["Generative AI"],
+    toolsUsed: ["Python"],
 
-    features: [
-      "Hands-on AI project",
-      "Practical learning",
-    ],
+    features: ["AI project"],
 
-    achievements: [
-      "Built working AI model",
-    ],
+    achievements: ["Built model"],
 
-    screenshots: ["NextWave2_page-0001.jpg"],
+    learningOutcome:
+      "Better AI understanding.",
   },
 
   {
@@ -182,54 +205,79 @@ const certifications = [
     issuer: "Outskill",
     duration: "2025",
 
-    description:
-      "Advanced program on AI and automation.",
+    description: "AI automation program.",
 
     longDescription:
-      "Focused on automation and prompt engineering.",
+      "Focused on AI workflows.",
+
+    detailedDescription:
+      "Built automation systems.",
 
     image: "Outskill_page-0001.jpg",
 
-    skills: ["Generative AI", "Automation"],
+    skills: ["Automation"],
+    toolsUsed: ["AI tools"],
 
-    features: [
-      "Advanced AI curriculum",
-      "Practical AI use",
-    ],
+    features: ["Automation systems"],
 
-    achievements: [
-      "Learned AI workflows",
-    ],
+    achievements: ["Built workflows"],
 
-    screenshots: ["Outskill_page-0001.jpg"],
+    learningOutcome:
+      "Improved productivity.",
   },
 
   {
     id: "python-django-internship",
-    title: "Python & Django Internship Programme",
-    issuer: "Anishree Technologies LLP",
-    duration: "Jun 2023 – Jul 2023",
-    location: "India",
+    title: "Python & Django Internship",
+    issuer: "Anishree Technologies",
+    duration: "2023",
 
-    description:
-      "Backend development internship using Django.",
+    description: "Backend internship.",
 
     longDescription:
-      "Worked on backend systems using Django.",
+      "Worked on APIs.",
+
+    detailedDescription:
+      "Built backend systems.",
 
     image: "ani.png",
 
-    skills: ["Python", "Django", "REST APIs"],
+    skills: ["Django"],
+    toolsUsed: ["Python"],
 
-    features: [
-      "Backend API development",
-    ],
+    features: ["API development"],
 
-    achievements: [
-      "Built backend modules",
-    ],
+    achievements: ["Built backend"],
 
-    screenshots: ["AnishreeTech.jpg"],
+    learningOutcome:
+      "Improved backend skills.",
+  },
+
+  {
+    id: "nxtwave-ai-certification",
+    title: "NxtWave AI Certification",
+    issuer: "NxtWave",
+    duration: "2025",
+
+    description: "AI fundamentals certification.",
+
+    longDescription:
+      "Learned AI basics.",
+
+    detailedDescription:
+      "Worked on AI concepts.",
+
+    image: "NxtWaveAI.jpg",
+
+    skills: ["AI"],
+    toolsUsed: ["Python"],
+
+    features: ["AI learning"],
+
+    achievements: ["Completed certification"],
+
+    learningOutcome:
+      "Strong AI foundation.",
   },
 ];
 
