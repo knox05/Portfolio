@@ -10,9 +10,9 @@ const certifications = [
       "National level hackathon participation showcasing innovation.",
 
     longDescription:
-      "Participated in HackWhack 3.0, a national-level hackathon focused on solving real-world problems with innovative technical solutions under strict time constraints.",
+      "Participated in HackWhack 3.0, a national-level hackathon focused on solving real-world problems.",
 
-    image: "/certs/Hackwhack.jpeg",
+    image: "Hackwhack.jpeg",
 
     skills: ["Problem Solving", "Teamwork", "Innovation", "Rapid Development"],
 
@@ -24,12 +24,12 @@ const certifications = [
 
     achievements: [
       "Delivered solution under time pressure",
-      "Demonstrated innovation and technical thinking",
+      "Demonstrated innovation",
     ],
 
     screenshots: [
-      "/certs/Hackwhack.jpeg",
-      "/certs/GSA_Vyankatesh Punnal.jpeg",
+      "Hackwhack.jpeg",
+      "GSA_Vyankatesh-Punnal.jpeg", // ⚠️ rename in ImageKit (no spaces)
     ],
   },
 
@@ -44,24 +44,23 @@ const certifications = [
       "Worked as an SDE intern in a fintech company environment.",
 
     longDescription:
-      "Completed a Software Development Engineer internship at Bluestock Fintech, working on real-world financial systems.",
+      "Completed a Software Development Engineer internship at Bluestock Fintech.",
 
-    image: "/certs/BlueStock.jpg",
+    image: "BlueStock.jpg",
 
-    skills: ["Software Engineering", "Fintech", "System Design", "Development Lifecycle"],
+    skills: ["Software Engineering", "Fintech", "System Design"],
 
     features: [
       "Real fintech project exposure",
       "Understanding scalable systems",
-      "Professional development workflow",
     ],
 
     achievements: [
-      "Worked on real-world fintech modules",
-      "Improved system design thinking",
+      "Worked on fintech modules",
+      "Improved system design",
     ],
 
-    screenshots: ["/certs/BlueStock.jpg"],
+    screenshots: ["BlueStock.jpg"],
   },
 
   {
@@ -74,24 +73,22 @@ const certifications = [
       "National-level hackathon focused on AI, DS, and IoT.",
 
     longDescription:
-      "Participated in CodeRush 1.0 during YCCE Techfest solving AI, DS, and IoT problems.",
+      "Participated in CodeRush 1.0 solving AI and IoT problems.",
 
-    image: "/certs/CodeRush.jpg",
+    image: "CodeRush.jpg",
 
-    skills: ["AI", "Data Science", "IoT", "Competitive Coding"],
+    skills: ["AI", "Data Science", "IoT"],
 
     features: [
       "AI & DS problem solving",
-      "National level exposure",
       "Team collaboration",
     ],
 
     achievements: [
-      "Worked on interdisciplinary problem",
-      "Enhanced real-world problem solving",
+      "Solved interdisciplinary problems",
     ],
 
-    screenshots: ["/certs/CodeRush.jpg"],
+    screenshots: ["CodeRush.jpg"],
   },
 
   {
@@ -101,27 +98,25 @@ const certifications = [
     duration: "Jun 2025 – Jul 2025",
 
     description:
-      "Intensive internship focused on modern web technologies.",
+      "Internship focused on modern web technologies.",
 
     longDescription:
-      "Completed a 4-week internship focusing on frontend and backend development.",
+      "Completed a 4-week internship on full-stack development.",
 
-    image: "/certs/InternPE_page-0001.jpg",
+    image: "InternPE_page-0001.jpg",
 
-    skills: ["Web Development", "Frontend", "Backend", "Professional Ethics"],
+    skills: ["Web Development", "Frontend", "Backend"],
 
     features: [
-      "Hands-on development experience",
-      "Real-world project exposure",
-      "Industry-level practices",
+      "Hands-on development",
+      "Real-world projects",
     ],
 
     achievements: [
-      "Delivered working web projects",
-      "Improved full-stack skills",
+      "Built web applications",
     ],
 
-    screenshots: ["/certs/InternPE_page-0001.jpg"],
+    screenshots: ["InternPE_page-0001.jpg"],
   },
 
   {
@@ -132,27 +127,25 @@ const certifications = [
     location: "Global Certification",
 
     description:
-      "Advanced certification for building Generative AI solutions on OCI.",
+      "Advanced certification for Generative AI solutions.",
 
     longDescription:
       "Achieved Oracle Certified Professional status in Generative AI.",
 
-    image: "/certs/Oracle.jpg",
+    image: "Oracle.jpg",
 
-    skills: ["Generative AI", "OCI", "LLMs", "Cloud AI", "Prompt Engineering"],
+    skills: ["Generative AI", "OCI", "LLMs"],
 
     features: [
-      "Oracle Certified Professional badge",
-      "LLM implementation",
-      "Enterprise AI deployment",
+      "Oracle certification",
+      "Enterprise AI knowledge",
     ],
 
     achievements: [
-      "Recognized as OCI Generative AI Professional",
-      "Built understanding of real-world AI deployment",
+      "Recognized as AI Professional",
     ],
 
-    screenshots: ["/certs/Oracle.jpg"],
+    screenshots: ["Oracle.jpg"],
   },
 
   {
@@ -162,27 +155,25 @@ const certifications = [
     duration: "2025",
 
     description:
-      "Hands-on workshop for building custom AI models.",
+      "Hands-on workshop for AI model building.",
 
     longDescription:
-      "Participated in an AI workshop and built a generative model.",
+      "Built a generative AI model in a guided workshop.",
 
-    image: "/certs/NextWave2_page-0001.jpg",
+    image: "NextWave2_page-0001.jpg",
 
-    skills: ["Generative AI", "Model Building", "AI Fundamentals"],
+    skills: ["Generative AI", "Model Building"],
 
     features: [
       "Hands-on AI project",
-      "Expert-led session",
-      "Practical AI learning",
+      "Practical learning",
     ],
 
     achievements: [
-      "Built a working AI model",
-      "Improved understanding of AI pipelines",
+      "Built working AI model",
     ],
 
-    screenshots: ["/certs/NextWave2_page-0001.jpg"],
+    screenshots: ["NextWave2_page-0001.jpg"],
   },
 
   {
@@ -192,27 +183,25 @@ const certifications = [
     duration: "2025",
 
     description:
-      "Advanced program on Generative AI and automation.",
+      "Advanced program on AI and automation.",
 
     longDescription:
-      "Completed AI program focusing on automation and prompt engineering.",
+      "Focused on automation and prompt engineering.",
 
-    image: "/certs/Outskill_page-0001.jpg",
+    image: "Outskill_page-0001.jpg",
 
-    skills: ["Generative AI", "Automation", "Prompt Engineering"],
+    skills: ["Generative AI", "Automation"],
 
     features: [
       "Advanced AI curriculum",
-      "Automation techniques",
-      "Practical AI applications",
+      "Practical AI use",
     ],
 
     achievements: [
-      "Learned real-world AI applications",
-      "Enhanced productivity using AI tools",
+      "Learned AI workflows",
     ],
 
-    screenshots: ["/certs/Outskill_page-0001.jpg"],
+    screenshots: ["Outskill_page-0001.jpg"],
   },
 
   {
@@ -223,26 +212,24 @@ const certifications = [
     location: "India",
 
     description:
-      "Professional internship focusing on backend web development.",
+      "Backend development internship using Django.",
 
     longDescription:
-      "Worked extensively on backend development using Django.",
+      "Worked on backend systems using Django.",
 
-    image: "/certs/ani.png",
+    image: "ani.png",
 
-    skills: ["Python", "Django", "Backend Development", "REST APIs"],
+    skills: ["Python", "Django", "REST APIs"],
 
     features: [
-      "Hands-on Django project development",
       "Backend API development",
     ],
 
     achievements: [
       "Built backend modules",
-      "Improved debugging skills",
     ],
 
-    screenshots: ["/certs/AnishreeTech.jpg"],
+    screenshots: ["AnishreeTech.jpg"],
   },
 ];
 

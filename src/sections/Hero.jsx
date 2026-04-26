@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import OptimizedImage from "../components/OptimizedImage";
+
 
 const Hero = () => {
   const heroRef = useRef();
@@ -106,10 +108,12 @@ const Hero = () => {
             {/* Frame */}
             <div className="absolute inset-0 rounded-2xl border border-white/10"></div>
 
-            <img
-              src="/profile.png"
-              alt="Varun"
-              className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl"
+            <OptimizedImage 
+              src="profile.png" 
+              alt="Profile"
+              width={500}
+              height={500}
+              className="rounded-2xl object-cover w-[280px] sm:w-[350px] md:w-[420px]"
             />
           </div>
         </div>

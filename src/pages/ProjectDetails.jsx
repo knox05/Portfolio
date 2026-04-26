@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import projects from "../data/projects";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import OptimizedImage from "../components/OptimizedImage";
 
 const ProjectDetails = () => {
   const { id } = useParams();
@@ -34,8 +35,10 @@ const ProjectDetails = () => {
   }
 
   return (
-    <div ref={pageRef} className="min-h-screen px-6 sm:px-10 md:px-20 py-32 text-white">
-      
+    <div
+      ref={pageRef}
+      className="min-h-screen px-6 sm:px-10 md:px-20 py-32 text-white"
+    >
       <div className="max-w-5xl mx-auto">
         
         {/* 🔙 Back */}
@@ -53,9 +56,10 @@ const ProjectDetails = () => {
 
         {/* 🖼️ Main Image */}
         <div className="animate mt-8 rounded-2xl overflow-hidden border border-white/10">
-          <img
+          <OptimizedImage
             src={project.image}
             alt={project.title}
+            width={1000}
             className="w-full object-cover"
           />
         </div>
@@ -82,6 +86,7 @@ const ProjectDetails = () => {
           <a
             href={project.github}
             target="_blank"
+            rel="noopener noreferrer"
             className="underline hover:text-gray-300"
           >
             GitHub
@@ -90,6 +95,7 @@ const ProjectDetails = () => {
           <a
             href={project.live}
             target="_blank"
+            rel="noopener noreferrer"
             className="underline hover:text-gray-300"
           >
             Live Demo
@@ -114,12 +120,13 @@ const ProjectDetails = () => {
             {project.screenshots.map((img, i) => (
               <div
                 key={i}
-                className="rounded-xl overflow-hidden border border-white/10"
+                className="rounded-xl overflow-hidden border border-white/10 group"
               >
-                <img
+                <OptimizedImage
                   src={img}
                   alt={`screenshot-${i}`}
-                  className="w-full object-cover hover:scale-105 transition duration-500"
+                  width={600}
+                  className="w-full object-cover transition duration-500 group-hover:scale-105"
                 />
               </div>
             ))}
