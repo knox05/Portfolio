@@ -11,6 +11,7 @@ import Experience from "./sections/Experience";
 import CertificationDetails from "./pages/CertificationDetails";
 import Certifications from "./sections/Certifications";
 import ProjectDetails from "./pages/ProjectDetails";
+import Education from "./sections/Education";
 
 /* 🔹 Home Page */
 function Home() {
@@ -31,6 +32,9 @@ function Home() {
       <Divider />
 
       <Certifications />
+      <Divider />
+
+      <Education />
       <Divider />
 
       <Contact />

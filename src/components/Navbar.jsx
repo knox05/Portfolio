@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
-const sections = ["home", "about", "projects", "certifications", "contact"];
+const sections = ["home", "about", "projects", "certifications", "education", "contact"];
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
