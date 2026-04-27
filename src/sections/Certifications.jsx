@@ -27,6 +27,7 @@ const Certifications = () => {
     );
 
     const cards = el.querySelectorAll(".cert-card");
+    const isMobile = window.innerWidth < 768;
 
         cards.forEach((card, i) => {
         let fromX = 0;
@@ -57,11 +58,11 @@ const Certifications = () => {
             duration: 1,
             ease: "power2.out",
             scrollTrigger: {
-                trigger: card,
-                start: "top 85%",
-                end: "top 30%",
-                scrub: 1, // 🔥 reversible animation
-            },
+              trigger: card,
+              start: "top 85%",
+              end: "top 30%",
+              scrub: isMobile ? false : 1,
+            }
             }
         );
     });

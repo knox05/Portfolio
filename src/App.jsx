@@ -83,8 +83,8 @@ function App() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(255,255,255,0.06),transparent_60%)]"></div>
 
           {/* Glow blobs */}
-          <div className="absolute top-[-200px] left-[-200px] w-[500px] h-[500px] bg-purple-500 rounded-full blur-[180px] opacity-10"></div>
-          <div className="absolute bottom-[-200px] right-[-200px] w-[500px] h-[500px] bg-blue-500 rounded-full blur-[180px] opacity-10"></div>
+        <div className="absolute top-[-250px] left-[-250px] w-[600px] h-[600px] bg-purple-500 rounded-full blur-[120px] md:blur-[200px] opacity-10"></div>
+        <div className="absolute bottom-[-250px] right-[-250px] w-[600px] h-[600px] bg-blue-500 rounded-full blur-[120px] md:blur-[200px] opacity-10"></div>
         </div>
 
         {/* 🧱 GRID BACKGROUND */}

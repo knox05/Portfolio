@@ -30,6 +30,7 @@ const Projects = () => {
 
     // Cards animation (alternate left/right)
     const cards = el.querySelectorAll(".project-card");
+    const isMobile = window.innerWidth < 768; 
 
     cards.forEach((card, i) => {
       gsap.fromTo(
@@ -47,8 +48,8 @@ const Projects = () => {
           trigger: card,
           start: "top 85%",
           end: "top 30%",
-          scrub: 1,
-        },
+          scrub: isMobile ? false : 1,
+        }
       }
     );
     });

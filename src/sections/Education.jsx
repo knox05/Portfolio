@@ -33,8 +33,10 @@ const Education = () => {
 
     // 🔹 Cards animation (NO crash, reversible)
     const cards = el.querySelectorAll(".edu-card");
+    const isMobile = window.innerWidth < 768;
 
     cards.forEach((card, i) => {
+      if (isMobile && i > 3) return;
       let fromX = i % 2 === 0 ? -100 : 100;
 
       gsap.fromTo(
@@ -52,8 +54,8 @@ const Education = () => {
             trigger: card,
             start: "top 85%",
             end: "top 30%",
-            scrub: 1, // 🔥 reversible animation
-          },
+            scrub: isMobile ? false : 1,
+          }
         }
       );
     });
