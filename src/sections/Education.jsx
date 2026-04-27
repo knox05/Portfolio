@@ -12,7 +12,9 @@ const Education = () => {
   useEffect(() => {
     const el = sectionRef.current;
 
-    // Header animation
+    if (!el) return;
+
+    // 🔹 Header animation
     gsap.fromTo(
       el.querySelector(".edu-header"),
       { y: 60, opacity: 0 },
@@ -23,32 +25,26 @@ const Education = () => {
         scrollTrigger: {
           trigger: el,
           start: "top 80%",
+          end: "top 40%",
+          scrub: 1,
         },
       }
     );
 
+    // 🔹 Cards animation (NO crash, reversible)
     const cards = el.querySelectorAll(".edu-card");
 
     cards.forEach((card, i) => {
-      let fromX = 0;
-      let fromY = 0;
-
-      // 🔥 clean directional animation (no diagonal)
-      if (i % 4 === 0) fromY = 80;
-      else if (i % 4 === 1) fromX = -120;
-      else if (i % 4 === 2) fromX = 120;
-      else fromY = -80;
+      let fromX = i % 2 === 0 ? -100 : 100;
 
       gsap.fromTo(
         card,
         {
           x: fromX,
-          y: fromY,
           opacity: 0,
         },
         {
           x: 0,
-          y: 0,
           opacity: 1,
           duration: 1,
           ease: "power3.out",
@@ -56,11 +52,12 @@ const Education = () => {
             trigger: card,
             start: "top 85%",
             end: "top 30%",
-            scrub: 1, // 🔥 reversible
+            scrub: 1, // 🔥 reversible animation
           },
         }
       );
     });
+
   }, []);
 
   return (
@@ -71,18 +68,20 @@ const Education = () => {
     >
       <div className="max-w-6xl mx-auto">
 
+        {/* 🔹 Header */}
         <div className="edu-header mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
             Education
           </h2>
 
-          <p className="text-gray-500 mt-4 max-w-xl text-sm">
-            My academic journey and foundational knowledge.
+          <p className="text-gray-500 mt-4 max-w-xl text-sm sm:text-base">
+            My academic journey and technical foundation in computer science and game technology.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {education.map((edu, index) => (
+        {/* 🔹 Grid */}
+        <div className="grid sm:grid-cols-2 gap-8">
+          {education?.map((edu, index) => (
             <div key={index} className="edu-card">
               <EducationCard edu={edu} />
             </div>
