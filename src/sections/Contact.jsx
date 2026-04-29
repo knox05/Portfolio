@@ -64,26 +64,64 @@ const Contact = () => {
   // 🔥 SEND EMAIL FUNCTION
   const sendEmail = (e) => {
     e.preventDefault();
+
+    const form = formRef.current;
+
+    const name = form.user_name.value.trim();
+    const email = form.user_email.value.trim();
+    const message = form.message.value.trim();
+    const honeypot = form.honeypot.value;
+
+    // 🛑 1. BOT PROTECTION (Honeypot)
+    if (honeypot) {
+      console.log("Bot detected 🚫");
+      return;
+    }
+
+    // 🛑 2. RATE LIMIT (1 min)
+    const lastSent = localStorage.getItem("lastEmailTime");
+    if (lastSent && Date.now() - lastSent < 60000) {
+      setStatus("⏳ Please wait before sending again");
+      return;
+    }
+
+    // 🛑 3. VALIDATION
+    if (name.length < 2) {
+      setStatus("Enter valid name");
+      return;
+    }
+
+    if (!email.includes("@")) {
+      setStatus("Enter valid email");
+      return;
+    }
+
+    if (message.length < 10) {
+      setStatus("Message too short");
+      return;
+    }
+
     setLoading(true);
     setStatus("");
 
     emailjs
       .sendForm(
-        "service_j7m9dma",     // service id 
-        "template_u1dazsj",    // template id 
+        "service_j7m9dma",
+        "template_u1dazsj",
         formRef.current,
-        "fJkzzIimkXeLbV2yt"      // public key
+        "fJkzzIimkXeLbV2yt"
       )
       .then(
         () => {
           setLoading(false);
           setStatus("✅ Message sent successfully!");
-          formRef.current.reset();
+          localStorage.setItem("lastEmailTime", Date.now());
+          form.reset();
         },
         (error) => {
-          console.log(error); // 🔥 ADD THIS
+          console.log(error);
           setLoading(false);
-          setStatus("❌ Failed to send message.");
+          setStatus("❌ Failed to send message");
         }
       );
   };
@@ -96,37 +134,41 @@ const Contact = () => {
     >
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
 
-        {/* 🧾 LEFT */}
+        {/* LEFT */}
         <div className="contact-left">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-6">
             Get In Touch
           </h2>
 
-          <p className="text-gray-400 text-sm sm:text-base leading-relaxed max-w-md">
-            I'm open to internships, freelance projects, and collaborations in
-            full-stack development and AI-based applications.
+          <p className="text-gray-400 text-sm">
+            Open to internships, freelance & AI projects.
           </p>
 
-          <div className="mt-6 space-y-2 text-sm text-gray-400">
-            <p>
-              📧 varunpunnal59@gmail.com <br />
-              📞 +91 9322037458
-            </p>
+          <div className="mt-6 text-gray-500 text-sm">
+            📧 varunpunnal59@gmail.com <br />
+            📞 +91 9322037458
           </div>
         </div>
 
-        {/* 📩 FORM */}
+        {/* FORM */}
         <form
           ref={formRef}
           onSubmit={sendEmail}
           className="contact-form w-full flex flex-col gap-4"
         >
+          {/* 🔥 HONEYPOT FIELD */}
+          <input
+            type="text"
+            name="honeypot"
+            style={{ display: "none" }}
+          />
+
           <input
             type="text"
             name="user_name"
             placeholder="Your Name"
             required
-            className="form-field p-3 bg-white/5 border border-white/10 rounded-lg outline-none focus:border-white/30 focus:bg-white/10 transition"
+            className="form-field p-3 bg-white/5 border border-white/10 rounded-lg"
           />
 
           <input
@@ -134,7 +176,7 @@ const Contact = () => {
             name="user_email"
             placeholder="Your Email"
             required
-            className="form-field p-3 bg-white/5 border border-white/10 rounded-lg outline-none focus:border-white/30 focus:bg-white/10 transition"
+            className="form-field p-3 bg-white/5 border border-white/10 rounded-lg"
           />
 
           <textarea
@@ -142,18 +184,17 @@ const Contact = () => {
             rows="5"
             placeholder="Your Message"
             required
-            className="form-field p-3 bg-white/5 border border-white/10 rounded-lg outline-none focus:border-white/30 focus:bg-white/10 transition"
+            className="form-field p-3 bg-white/5 border border-white/10 rounded-lg"
           />
 
           <button
             type="submit"
             disabled={loading}
-            className="mt-2 px-6 py-3 bg-white text-black rounded-full font-medium hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition"
+            className="mt-2 px-6 py-3 bg-white text-black rounded-full font-medium hover:scale-105 transition"
           >
             {loading ? "Sending..." : "Send Message"}
           </button>
 
-          {/* 🔔 STATUS MESSAGE */}
           {status && (
             <p className="text-sm mt-2 text-gray-300">
               {status}
